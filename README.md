@@ -18,16 +18,22 @@ Usage
 Be aware that the XML dump files from Wikipedia can be quite big (e.g. the german one is 2.8 GB), so the
 download might take a while:
 
-    sh getwiki.sh de
+```bash
+sh getwiki.sh de
+```
 
 2. Generate the dictionary (here a german-russian dictionary) into the CSV file `de_ru.csv`
 excluding articles with keywords from the `dewiki-exclude.txt` file:
 
-    python generatedict.py -i dewiki-latest-pages-articles.xml -l ru -o de_ru.csv -x excludes/dewiki-exclude.txt
+```bash
+python generatedict.py -i dewiki-latest-pages-articles.xml -l ru -o de_ru.csv -x excludes/dewiki-exclude.txt
+```
 
 3. With `searchdict.py` you can search through the dictionary for a translation of a word:
-   python searchdict.py -i de_ru.csv
-   Enter word to translate:
+```bash
+python searchdict.py -i de_ru.csv
+Enter word to translate:
+```
 
 Enjoy!
 
